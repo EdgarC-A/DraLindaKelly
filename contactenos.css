@@ -1,0 +1,615 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  scroll-snap-type: x mandatory;
+}
+footer {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+/* HTML: <div class="loader"></div> */
+
+/*CONFIGURACION DEL LOGOTIPO */
+#logo {
+  width: 60px;
+  float: left;
+  margin: 0px 30px 0px;
+}
+.contenedor-logo {
+  margin-left: -20px;
+}
+
+@media (max-width: 600px) {
+  .contenedor-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* PANEL DE NAVEGACION */
+.contenedor-inicio {
+  width: 100%;
+}
+
+nav {
+  margin-right: 20px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  justify-items: right; /* Centra horizontalmente los elementos del nav */
+}
+
+/*CONTIENE LOS UL LI Y LOS A */
+.contenedor-ul {
+  justify-content: end;
+  list-style: none;
+
+  margin: 20px;
+  display: flex; /* Cambio a flex para alinear horizontalmente */
+}
+
+.contenedor-ul li {
+  margin-right: 10px;
+  font-size: 18px;
+  padding: 20px;
+  transition: color 0.3s; /* Efecto de transición para el cambio de color */
+}
+
+.contenedor-ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.contenedor-ul li a:hover {
+  transition: 0.2s linear;
+  color: #0eaacc;
+}
+
+/* EFECTOS PARA LOS LINKS DE LOS UL */
+.links {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.links::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #0a8bdb;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.5s;
+  will-change: width;
+}
+
+.links:hover::after {
+  transition: 0.2s linear;
+  width: 100%;
+  right: 0;
+}
+/* FIN */
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .contenedor-ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .contenedor-ul li {
+    margin: 5px;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 901px) {
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: row;
+  }
+
+  .contenedor-ul li {
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 25px;
+  }
+}
+
+.centrado {
+  margin-top: 350px;
+  text-align: center;
+}
+#redes1 {
+  width: 30px;
+}
+
+.contenedor-redes {
+  padding: 0px 10px 0px;
+  margin-top: 20px;
+}
+#redes1:hover {
+  transition: 0.2s linear;
+  border-radius: 50%;
+  background-color: #616161;
+  transform: scale(1.1);
+}
+/*FINAL DEL CONTENIDO DE LOS UL LI Y a */
+
+/* SECCION FORMULARIO */
+.form1 {
+  background-image: url(img-contact/backgraound.jpg);
+  height: auto;
+  background-size: cover;
+  display: flex;
+  padding: 20px;
+}
+.form1 > div {
+  width: 50%;
+}
+
+input {
+  margin-left: 20px;
+  border-radius: 50px;
+  background-color: rgb(216, 216, 216);
+  display: block;
+  width: 70%;
+}
+
+#country {
+  margin-left: 20px;
+  width: 70%;
+  background-color: rgb(216, 216, 216);
+}
+#enviar {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  padding: 7px;
+  background-color: rgb(148, 148, 148);
+  transition-duration: 0.4s;
+}
+#enviar:hover {
+  transform: scale(1.03);
+  color: white;
+  background-color: #0a8bdb;
+}
+textarea {
+  margin-left: 20px;
+  background-color: rgb(216, 216, 216);
+  width: 70%;
+  height: 100px;
+}
+#servicios {
+  margin-left: 20px;
+}
+.div1 {
+  opacity: 0.7;
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+}
+
+.div1 h1 {
+  color: #0a8bdb;
+  font-size: 20px;
+  margin: 10px 0px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.div1 a {
+  text-align: center;
+  width: 20%;
+  font-size: 18px;
+  color: #000000;
+}
+.div1 a:hover {
+  border-radius: 40px;
+  transform: scale(1.02);
+  background-color: #0a8bdb;
+  transition: 0.2s linear;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 600px) {
+  .div1 a {
+    width: 100%;
+  }
+}
+.div1 h4 {
+  font-size: 15px;
+  color: #0a8bdb;
+}
+.div1 p {
+  color: black;
+  text-align: left;
+  margin: 0px 0px 16px;
+  line-height: 24px;
+}
+#info {
+  padding: 5px;
+  margin-top: 20px;
+  display: block;
+}
+.div2 {
+  opacity: 0.7;
+  padding-top: 35px;
+  background-color: white;
+}
+.div2 h3 {
+  color: #0a8bdb;
+  font-size: 20px;
+  margin: 10px 0px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  font-weight: 700;
+}
+label {
+  margin-left: 20px;
+}
+#h3-serv {
+  margin-left: 20px;
+}
+/* INFORMACION DE CONTACTO DE LA EMPRESA */
+
+/* CONTENDOR PRINCIPAL */
+
+.container-item {
+  background-image: url(img-nosotros/cartagena.jpg);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(10%);
+
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(1.3fr);
+}
+
+.contenedor-one {
+  display: flex;
+}
+@media (max-width: 600px) {
+  .contenedor-one {
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+    margin-right: 200px;
+  }
+}
+.contenedor1 {
+  text-align: left;
+  width: 33%;
+  padding: 40px;
+}
+@media (max-width: 600px) {
+  .contenedor1 iframe {
+    margin-left: -100px;
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+  }
+}
+#ayuda-img {
+  height: 200px;
+  border-radius: 20px 100px 0px;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#ayuda-img:hover {
+  transition: 0.2s linear;
+  transform: scale(1.01);
+}
+
+.contenedor2 {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px 100px 0px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 100px;
+  transition: width 2s, heigth 4s;
+}
+
+@media (max-width: 600px) {
+  .contenedor2 {
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+    text-align: left;
+    padding-left: 50px;
+    margin-left: 50px;
+  }
+}
+
+.contenedor2 h1 {
+  border-radius: 100px;
+  text-decoration: overline #0eaacc;
+  color: rgb(0, 0, 0);
+}
+.contenedor2 a {
+  border-radius: 100px;
+  font-size: 20px;
+  color: #000000;
+}
+#contact {
+  margin-top: 30px;
+  width: 25px;
+  padding-right: 5px;
+}
+
+.contenedor2 a:hover {
+  transition: 0.2s linear;
+  color: #0eaacc;
+}
+
+.contenedor3 {
+  text-align: right;
+  margin-right: 100px;
+  width: 35%;
+  @media (max-width: 60ppx) {
+    .contenedor3 {
+      flex-direction: column; /* Disponer los elementos en columna */
+      align-items: center; /* Centrar los elementos */
+    }
+  }
+  #firma-final {
+    margin-top: 20px;
+    width: 150px;
+  }
+  @media (max-width: 600px) {
+    #firma-final {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 50px;
+    }
+  }
+
+  .container2 a img:hover {
+    color: #0eaacc;
+    transform: scale(1.1);
+  }
+}
+
+/* FOOTER */
+/* VISTA DE INFORMACION DE LA FIRMA FOOTER*/
+
+.contenedor-all {
+  display: flex; /* Activar flexbox */
+  justify-content: space-between; /* Distribuir espacio entre los divs */
+  background: -webkit-linear-gradient(90deg, #0b0d0f, #1a1d21, #292e36);
+  background: linear-gradient(90deg, #0b0d0f, #1a1d21, #292e36);
+  padding: 10px 0px 0px;
+}
+footer {
+  background: -webkit-linear-gradient(90deg, #0b0d0f, #1a1d21, #292e36);
+  background: linear-gradient(90deg, #0b0d0f, #1a1d21, #292e36);
+
+  padding-bottom: 10px;
+}
+.contenedor-empresa {
+  margin-left: 10px;
+  width: 30%;
+  padding: 0px 15px;
+}
+.contenedor-empresa h4 {
+  color: #ffffff;
+
+  font-size: 22px;
+}
+
+.contenedor-empresa a {
+  margin-top: 10px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.contenedor-empresa a:hover {
+  transition: 0.2s linear;
+  color: #0eaacc;
+}
+
+/* CONTENEDOR DE CONTACTO info Y ICONOS */
+
+.contenedor-info {
+  width: 50%;
+  text-align: center;
+}
+.contenedor-info form,
+p {
+  color: rgb(255, 255, 255);
+}
+.contenedor-info li {
+  color: white;
+  justify-content: center;
+  display: flex;
+  margin-top: 17px;
+}
+.contenedor-info #form2 {
+  margin-top: 20px;
+  text-align: center;
+}
+.contenedor-info input {
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffffe0;
+  transition-duration: 0.4s;
+  padding: 3px;
+}
+
+#btnsig {
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background-color: #383838;
+  border-radius: 20px;
+}
+
+#btnsig:hover {
+  background-color: #0a8bdb;
+  color: #ffffff;
+}
+.contenedor-img {
+  width: 30%;
+}
+.contenedor-info a img {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.img-footer {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#redes1 {
+  width: 30px;
+}
+
+.contenedor-redes {
+  padding: 0px 10px 0px;
+  margin-top: 20px;
+}
+#redes1:hover {
+  transition: 0.2s linear;
+  border-radius: 50%;
+  background-color: #616161;
+  transform: scale(1.1);
+}
+#redes {
+  width: 40px;
+}
+#redes:hover {
+  transition: 0.2s linear;
+  transform: scale(1.11);
+  background-color: white;
+  border-radius: 50%;
+}
+.contenedor-info h2 {
+  color: white;
+}
+.contenedor-info p {
+  color: white;
+}
+#siguenos {
+  margin-bottom: 5px;
+  margin-left: 20px;
+
+  text-align: center;
+  text-decoration: overline;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+  .contenedor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form2 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* SEPARADORES  */
+.separador3 {
+  margin-top: 200px;
+}
+
+.separador4 {
+  margin-top: 200px;
+}
+/* FIN */
+
+/* ESTO ES UN DIV SEPARADOR */
+.separador2 {
+  margin-bottom: 135px;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor-all {
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .contenedor-empresa,
+  .contenedor-info,
+  .contenedor-img {
+    width: 100%; /* Ancho completo para cada contenedor */
+    margin: 10px 0; /* Margen vertical */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .contenedor-empresa h4,
+  .contenedor-empresa a {
+    font-size: 18px; /* Tamaño de fuente reducido */
+  }
+
+  .contenedor-img #redes {
+    width: 30px; /* Ancho reducido para los iconos */
+  }
+
+  .contenedor-info a img {
+    width: 150px; /* Ancho reducido para la imagen */
+  }
+}
+
+/* FINALIZACION CONTENEDOR DE IMAGEN DE LA EMPRESA FOOTER */

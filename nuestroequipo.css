@@ -1,0 +1,426 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* .banner {
+  width: 20%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+} */
+
+footer {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+/*CONFIGURACION DEL LOGOTIPO */
+.logo {
+  margin-top: -2px;
+  width: 79px;
+  float: left;
+}
+
+/* PANEL DE NAVEGACION */
+nav {
+  margin-right: 20px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  justify-items: right; /* Centra horizontalmente los elementos del nav */
+}
+
+/*CONTIENE LOS UL LI Y LOS A */
+.contenedor-ul {
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  margin: 20px;
+  display: flex; /* Cambio a flex para alinear horizontalmente */
+}
+
+.contenedor-ul li {
+  margin-right: 10px;
+  font-size: 18px;
+  padding: 25px;
+  transition: color 0.3s; /* Efecto de transición para el cambio de color */
+}
+
+.contenedor-ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.contenedor-ul li a:hover {
+  color: #0eaacc;
+}
+
+/* EFECTOS PARA LOS LINKS DE LOS UL */
+.links {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.links::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #0a8bdb;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.5s;
+  will-change: width;
+}
+
+.links:hover::after {
+  width: 100%;
+  right: 0;
+}
+/* FIN */
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .contenedor-ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .contenedor-logo img {
+    width: 100px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .contenedor-ul li {
+    margin: 5px;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .contenedor-logo img {
+    width: 150px; /* Ajusta el tamaño del logo para pantallas medianas */
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 901px) {
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contenedor-ul {
+    flex-direction: row;
+  }
+
+  .contenedor-ul li {
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 25px;
+  }
+
+  .contenedor-logo img {
+    width: 100px; /* Mantén el tamaño original del logo */
+  }
+}
+
+.centrado {
+  margin-top: 350px;
+  text-align: center;
+}
+/*FINAL DEL CONTENIDO DE LOS UL LI Y a */
+
+/* VISTA DE INFORMACION DE LA FIRMA FOOTER*/
+
+.contenedor-all {
+  display: flex; /* Activar flexbox */
+  justify-content: space-between; /* Distribuir espacio entre los divs */
+  background-color: #252525;
+  padding: 10px 0px 0px;
+}
+.contenedor-empresa {
+  margin-left: 10px;
+  width: 30%;
+  padding: 0px 15px;
+}
+.contenedor-empresa h4 {
+  color: #ffffff;
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.contenedor-empresa a {
+  margin-top: 10px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.contenedor-empresa a:hover {
+  color: #0eaacc;
+}
+
+.contactos form #texto {
+  margin-top: 20px;
+  padding: 10px 13px;
+  background-color: #d8d8d8;
+}
+
+/* CONTENEDOR DE CONTACTO info Y ICONOS */
+
+.contenedor-info {
+  width: 100%;
+  text-align: center;
+}
+
+.contenedor-info a img {
+  width: 200px;
+}
+
+/* SEPARADORES  */
+.separador3 {
+  margin-top: 200px;
+}
+
+.separador4 {
+  margin-top: 200px;
+}
+/* FIN */
+
+/* INFORMACION DE CONTACTO DE LA EMPRESA */
+
+/* CONTENDOR PRINCIPAL */
+
+.container-item {
+  padding: 80px 30px 80px;
+  background: -webkit-linear-gradient(90deg, #0a8bdb, #4d70ff, #f0f3ff);
+  background: linear-gradient(90deg, #0a8bdb, #4d70ff, #f0f3ff);
+  display: flex;
+  gap: 48px 200px;
+}
+
+/* CONTIENE LA IMAGEN */
+
+.container-item a iframe {
+  width: 400px;
+  height: 300px;
+  border-radius: 50px;
+}
+
+#ayuda-img {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.733);
+}
+#ayuda-img:hover {
+  transform: scale(1.01);
+}
+.div-info {
+  margin: 20px;
+}
+.div-info h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+.div-info a {
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: -20px;
+}
+
+/* CONTIENE IMG ICONOS */
+.div-info ul a img {
+  width: 20px;
+  margin-top: 10px;
+}
+
+.div-info a img:hover {
+  transform: scale(1.1);
+}
+
+.div-info a:hover {
+  color: #000000;
+}
+
+.final-h1 img {
+  margin: 40px 40px 40px;
+  text-align: end;
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .container-item {
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+  }
+}
+
+/* FIN INFORMACION DE CONTACTO DE LA EMPRESA */
+
+/* CONTENEDOR DE IMAGEN DE LA EMPRESA FOOTER */
+
+.contenedor-img {
+  width: 40%; /* Asegurar que ocupe el mismo espacio que los otros divs */
+  text-align: right;
+  margin-right: 10px;
+}
+
+.contenedor-img #redes {
+  margin-top: 80px;
+  width: 20%;
+  padding: 10px;
+}
+
+.contenedor-img a:hover {
+  filter: blur(2px);
+}
+
+/* ESTO ES UN DIV SEPARADOR */
+.separador2 {
+  margin-bottom: 135px;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor-all {
+    flex-direction: column; /* Disponer los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .contenedor-empresa,
+  .contenedor-info,
+  .contenedor-img {
+    width: 100%; /* Ancho completo para cada contenedor */
+    margin: 10px 0; /* Margen vertical */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .contenedor-empresa h4,
+  .contenedor-empresa a {
+    font-size: 18px; /* Tamaño de fuente reducido */
+  }
+
+  .contenedor-img #redes {
+    width: 30px; /* Ancho reducido para los iconos */
+  }
+
+  .contenedor-info a img {
+    width: 150px; /* Ancho reducido para la imagen */
+  }
+}
+
+/* FINALIZACION CONTENEDOR DE IMAGEN DE LA EMPRESA FOOTER */
+#img-1 {
+  border-radius: 10%;
+  width: 300px;
+}
+#img-2 {
+  border-radius: 10%;
+  width: 350px;
+}
+.news-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ajustar para tres noticias */
+}
+
+.news-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(128, 128, 128, 0.116);
+  width: 33.3333%; /* Ajustar para tres noticias */
+  flex: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+}
+
+.news-item h4 {
+  padding: 4px;
+  color: #0a8bdb;
+  text-align: left;
+}
+
+.news-item p {
+  padding: 10px;
+  text-align: justify;
+  color: #000000;
+}
+
+.news-item a {
+  background-color: rgba(128, 128, 128, 0.205);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  padding: 6px;
+  border-radius: 50px;
+  color: #000000;
+}
+
+.news-item a:hover {
+  color: white;
+  background-color: #0a8bdb;
+}
+
+.news-item:hover {
+  cursor: pointer;
+  color: #0a8bdb;
+  transform: scale(1.03);
+}
